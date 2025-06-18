@@ -1,27 +1,27 @@
-.option1 {
-font-family: "Open Sans", sans-serif;
-font-weight: 300;
-font-size: 20px;
-line-height: 30px;
-font-style: italic;
+.block1 {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
 }
 
-.option2 {
+.block2 {
     text-decoration: line-through;
 }
 
-.option3 {
+.block3 {
     text-align: center;
     text-transform: uppercase;
 }
 
-.option4 {
-    word-spacing: 30px;
-    text-shadow: 1px 1px 1px #c2a2de;
-    text-decoration: overline wavy;
+.block4 {
+    word-spacing: 5px;
+    text-decoration: overline wavy ;
+    text-shadow: 1px 1px 1px #987adf;
 }
 
-.option5 {
+.block5 {
     letter-spacing: 5px;
     text-decoration: underline double;
 }
