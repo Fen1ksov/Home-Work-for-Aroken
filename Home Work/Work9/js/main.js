@@ -23,7 +23,7 @@
     // Модалка
 
     const modal = document.querySelector('.modal')
-    const modalButton = document.querySelector('.about__img-button')
+    const modalButton = document.querySelector('.about__img-btn')
 
     modalButton.addEventListener('click', openModal)
     modal.addEventListener('click', closeModal)
@@ -38,7 +38,7 @@
 
         const target = e.target
 
-        if (target.closest('.modal__cancel') || target.classList.contains('modal')) {
+        if (target.closest('.modal__close') || target.classList.contains('modal')) {
             document.body.classList.remove('body--opened-modal')
         }
 
@@ -46,31 +46,31 @@
 
     // Табы
 
-    const tabControls = document.querySelector('.tab-conrols')
+    const tabControls = document.querySelector('.tab-controls')
 
     tabControls.addEventListener('click', toggleTab)
 
     function toggleTab(e) {
 
-        const tabControl = e.target.closest('.tab-conrols__link')
+        const tabControl = e.target.closest('.tab-controls__link')
 
         if (!tabControl) return
         e.preventDefault()
-        if (tabControl.classList.contains('tab-conrols__link--active')) return
+        if (tabControl.classList.contains('tab-controls__link--active')) return
 
         const tabContentID = tabControl.getAttribute('href')
         const tabContent = document.querySelector(tabContentID)
-        const activeControl = document.querySelector('.tab-conrols__link--active')
+        const activeControl = document.querySelector('.tab-controls__link--active')
         const activeContent = document.querySelector('.tab-content--show')
 
         if (activeControl) {
-            activeControl.classList.remove('tab-conrols__link--active')
+            activeControl.classList.remove('tab-controls__link--active')
         }
         if (activeContent) {
             activeContent.classList.remove('tab-content--show')
         }
 
-        tabControl.classList.add('tab-conrols__link--active')
+        tabControl.classList.add('tab-controls__link--active')
         tabContent.classList.add('tab-content--show')
 
     }
